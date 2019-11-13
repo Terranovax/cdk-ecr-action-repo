@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    // Because type data helps intellisense
+    "typeRoots": ["./node_modules/@types"],
+  },
+  "exclude": [
+    "cdk.out"
+  ]
+}

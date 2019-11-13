@@ -1,0 +1,45 @@
+extends: "tslint:recommended"
+rules:
+    semicolon: [ true, "always", "ignore-interfaces" ]
+
+    # Single quotes for life
+    quotemark: single
+
+    # We're not Java
+    max-classes-per-file: false
+
+    # Rich Types and Interfaces should be allowed
+    interface-over-type-literal: false
+
+    # File should end with a newline. Why else?
+    eofline: false
+
+    # Way more readable without
+    arrow-parens: false
+
+    # Use namespaces because they rock!
+    no-namespace: false
+
+    # Long lines make for bad readability
+    max-line-length: [true, 150]
+
+    # Super annoying
+    object-literal-sort-keys: false
+
+    # Trailing comma gets into a fight with itself when splitting lists over multiple lines
+    trailing-comma: false
+
+    # If it wasn't used, don't create it
+    no-unused-expression: [true, "allow-new"]
+
+    # allow pascal case for static variables
+    variable-name: [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"]
+
+    # Unhandled promises are the source of all kinds of bugs and race conditions...
+    no-floating-promises: ["Promise"]
+
+    # Don't try to confuse people with empty interfaces
+    no-empty-interface: true
+
+    # Cleaner imports
+    no-duplicate-imports: error
