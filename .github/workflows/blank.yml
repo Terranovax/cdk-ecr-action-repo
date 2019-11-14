@@ -1,0 +1,15 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Terranovax/aws-ecr-deploy@develop
+      name: Build & Deploy
+      with:
+        account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+        access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        region: eu-west-1
+        image: whalesay
+      
