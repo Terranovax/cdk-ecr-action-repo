@@ -1,4 +1,4 @@
-name: CI
+name: Deploy Tagged Release
 on: [push]
 jobs:
   build:
@@ -12,4 +12,5 @@ jobs:
         access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         region: eu-west-1
+        create_repo: true
       
